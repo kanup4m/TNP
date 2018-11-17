@@ -13,6 +13,7 @@
 <style type="text/css">
     body {
     width: 100wh;
+   
     height: 90vh;
     color: #fff;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
@@ -69,12 +70,17 @@ h6 {
     left: 0;
 }
 
+input:placeholder-shown {
+  border-color: blue;
+}
+
 .row {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 3rem;
     padding-bottom: 3rem;
 }
+ 
 </style>
 <body>
     <div class="container">
@@ -97,23 +103,24 @@ h6 {
 
           <!--Body-->
           <div class="md-form">
-            <input type="text" id="Form-name1" class="form-control">
-            <label for="Form-name1">Your name</label>
+            <input type="text" id="Form-name1" class="form-control" placeholder="First name">
+             
+            <!-- <label for="Form-name1">Your name</label> -->
           </div>
 
           <div class="md-form">
-            <input type="text" id="Form-surname1" class="form-control">
-            <label for="Form-surname1">Your surname</label>
+            <input type="text" id="Form-surname1" class="form-control" placeholder="Last name">
+            <!-- <label for="Form-surname1">Your surname</label> -->
           </div>
 
           <div class="md-form">
-            <input type="text" id="Form-email1" class="form-control">
-            <label for="Form-email1">Your email</label>
+            <input type="text" id="Form-email1" class="form-control" placeholder="Your email">
+            <!-- <label for="Form-email1">Your email</label> -->
           </div>
 
           <div class="md-form pb-3">
-            <input type="password" id="Form-pass1" class="form-control">
-            <label for="Form-pass1">Your password</label>
+            <input type="password" id="Form-pass1" class="form-control" placeholder="Your password">
+            <!-- <label for="Form-pass1">Your password</label> -->
             <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
                 Password?</a></p>
           </div>

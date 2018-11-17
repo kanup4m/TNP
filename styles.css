@@ -1,0 +1,33 @@
+body {
+	background-color: #F8F9FA;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+p{
+	color: #707070;
+	/*padding-top: 10px;*/ 
+	font-size: 2rem;
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+	padding: 20px;
+}
+.dropdown-menu {
+	transition: all 0.3s;
+}
+
+.table-color{
+	background-color: white;
+	/*border-radius: 90%;*/
+}
+.table.table-hover td,
+.table.table-hover th
+ {
+	border: none;
+	padding-top: 1.3rem;
+	padding-bottom: 1.3rem;
+}
+.custom-control.custom-radio.custom-control-inline {
+	padding-bottom: 2rem;
+}
+
