@@ -1,100 +1,239 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>TNP</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-	<div class="container">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#" style="font-weight:800; font-size: 3em;">TNP</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link active" href="#">
-      	      <i class="fas fa-home fa-2x" style="color: #20c997;"></i>
-<span class="sr-only">(current)</span></a>
-      	 <a class="nav-item nav-link" href="#">
-      	<i class="fas fa-envelope fa-2x"></i>
-      </a>
-  <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            	<i class="fas fa-user fa-2x" ></i>       
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">PROFILE INFO</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">LOGOUT</a>
+    <head>
+        <title>
+            TNP
+        </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <!-- bootstrap -->
+            <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+                <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+                        <link href="styles.css" rel="stylesheet" type="text/css">
+                        </link>
+                    </link>
+                </link>
+            </link>
+        </meta>
+    </head>
+    <body>
+    <!-- javascript modal -->
+        <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">
+                            Result
+                        </h5>
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table-fill">
+                            <thead>
+                                <tr class="table-row">
+                                    <th class="text-left headd">
+                                        Round
+                                    </th>
+                                    <th class="text-left headd">
+                                        Result
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr class="table-row">
+                                    <td class="text-left">
+                                        Written Round
+                                    </td>
+                                    <td class="text-left">
+                                        Selected
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="text-left">
+                                        Technical Round
+                                    </td>
+                                    <td class="text-left">
+                                        Selected
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="text-left">
+                                        Managerial Round
+                                    </td>
+                                    <td class="text-left">
+                                        Selected
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        HR Round
+                                    </td>
+                                    <td class="text-left">
+                                        Rejected
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </li>
-
-    </div>
-  </div>
-</nav>
-<p style="text-align: center;">STUDENT DASHBOARD</p>
-<label class="radio-inline control-label" style="color: #20c997;font-size: 2rem; font-weight: 400;">Events</label> &nbsp;&nbsp;&nbsp;&nbsp;
-
-<div class="custom-control custom-radio custom-control-inline">
-
-  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline1">All</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline2">Registered</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline3">Unregistered</label>
-</div>
-
-<div class="table-color">
-<table class="table table-hover " sty>
-  <thead>
-    <tr>
-      <th scope="col">SR.NO.</th>
-      <th scope="col">COMPANY</th>
-      <th scope="col">DATE</th>
-      <th scope="col">STATUS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1.</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td><button type="button" class="btn btn-outline-success">Selected</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2.</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td><button type="button" class="btn btn-outline-success">Selected</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3.</th>
-      <td colspan="2">Larry the Bird</td>
-      <td><button type="button" class="btn btn-outline-danger">Rejected</button></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-
- 
-
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
+        <!-- modal end -->
+        <!-- navbar start -->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#" style="font-weight:800; font-size: 3em;">
+                    TNP
+                </a>
+                <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link active" href="#">
+                            <i class="fas fa-home fa-2x" style="color: #20c997;">
+                            </i>
+                            <span class="sr-only">
+                                (current)
+                            </span>
+                        </a>
+                        <a class="nav-item nav-link" href="#">
+                            <i class="fas fa-envelope fa-2x">
+                            </i>
+                        </a>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                                <i class="fas fa-user fa-2x">
+                                </i>
+                            </a>
+                            <div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                    PROFILE INFO
+                                </a>
+                                <div class="dropdown-divider">
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    LOGOUT
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end  -->
+            <p style="text-align: center;">
+                STUDENT DASHBOARD
+            </p>
+            <label class="radio-inline control-label" style="color: #20c997;font-size: 2rem; font-weight: 400;">
+                Events &nbsp;&nbsp;&nbsp;
+            </label>
+            <!-- radio buttons -->
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" id="customRadioInline1" name="customRadioInline1" type="radio">
+                    <label class="custom-control-label" for="customRadioInline1">
+                        All
+                    </label>
+                </input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" id="customRadioInline2" name="customRadioInline1" type="radio">
+                    <label class="custom-control-label" for="customRadioInline2">
+                        Registered
+                    </label>
+                </input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" id="customRadioInline3" name="customRadioInline1" type="radio">
+                    <label class="custom-control-label" for="customRadioInline3">
+                        Unregistered
+                    </label>
+                </input>
+            </div>
+            <!-- table -->
+            <div class="table-color">
+                <table class="table table-hover " sty="">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                SR.NO.
+                            </th>
+                            <th scope="col">
+                                COMPANY
+                            </th>
+                            <th scope="col">
+                                DATE
+                            </th>
+                            <th scope="col">
+                                STATUS
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                1.
+                            </th>
+                            <td>
+                                TCS
+                            </td>
+                            <td>
+                                27/11/2018
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-success" data-target="#exampleModalCenter" data-toggle="modal" type="button">
+                                    Selected
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                2.
+                            </th>
+                            <td>
+                            </td>
+                            <td>
+                                Thornton
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-success" data-target="#exampleModalCenter" data-toggle="modal" type="button">
+                                    Selected
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                3.
+                            </th>
+                            <td colspan="2">
+                                Larry the Bird
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-danger" type="button">
+                                    Rejected
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- table end -->
+        <!-- jquery -->
+        <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+        </script>
+    </body>
 </html>
